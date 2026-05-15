@@ -121,7 +121,8 @@ module.exports = {
 
     // --- Full help list ---
     let msg = `╭┈─────┈──┈─────┈╮\n` +
-              `       🌸 Xʌ Ɩʆ 🌸\n` +
+              `   🌸  𝐆𝐎𝐀𝐓 𝐌𝐄𝐍𝐔  🌸
+			     ADMIN : Xʌʌ Ɩʆ🗽\n` +
               `╰┈─────┈──┈─────┈╯\n\n`;
               
     const sortedCategories = Object.keys(categoriesList).sort();
