@@ -67,8 +67,7 @@ module.exports = {
       "https://i.imgur.com/vWigmIF.mp4",
       "https://i.imgur.com/V6Au0p4.mp4",
       "https://i.imgur.com/2LI1yqK.mp4"
-	  "https://i.imgur.com/7xXsxov.mp4"   
-		];
+    ];
 
     const cacheDir = path.join(__dirname, "cache");
     if (!fs.existsSync(cacheDir)) fs.mkdirSync(cacheDir, { recursive: true });
@@ -119,7 +118,7 @@ module.exports = {
     // --- Full help list ---
     let msg = `╭┈─────┈──┈─────┈╮\n` +
               `   🌸  𝐆𝐎𝐀𝐓 𝐌𝐄𝐍𝐔  🌸\n` +
-              `     ADMIN : Xʌ Ɩʆ🗽\n` +
+              `      ADMIN : Xʌ Ɩʆ🗽\n` +
               `╰┈─────┈──┈─────┈╯\n\n`;
 
     const sortedCategories = Object.keys(categoriesList).sort();
@@ -164,4 +163,4 @@ function downloadFile(url, dest) {
       reject(err);
     });
   });
-		}
+	  }
