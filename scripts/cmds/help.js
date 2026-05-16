@@ -67,7 +67,8 @@ module.exports = {
       "https://i.imgur.com/vWigmIF.mp4",
       "https://i.imgur.com/V6Au0p4.mp4",
       "https://i.imgur.com/2LI1yqK.mp4"
-    ];
+	  "https://i.imgur.com/7xXsxov.mp4",
+  ];
 
     const cacheDir = path.join(__dirname, "cache");
     if (!fs.existsSync(cacheDir)) fs.mkdirSync(cacheDir, { recursive: true });
