@@ -1,4 +1,4 @@
-			const fs = require("fs-extra");
+const fs = require("fs-extra");
 const path = require("path");
 const https = require("https");
 
@@ -36,9 +36,7 @@ module.exports = {
 
   onStart: async function ({ message, args, prefix }) {
     const allCommands = global.GoatBot.commands;
-    const categories = {};
 
-  
     const cleanCategoryName = (text) => {
       if (!text) return "OTHERS";
       return text
@@ -49,7 +47,6 @@ module.exports = {
         .toUpperCase();
     };
 
-    
     if (!global.GoatBot.cacheHelp) {
       const cachedCategories = {};
       for (const [name, cmd] of allCommands) {
@@ -62,16 +59,15 @@ module.exports = {
     }
     const categoriesList = global.GoatBot.cacheHelp;
 
- 
     const videoURLs = [
       "https://i.imgur.com/IudwgaP.mp4",
       "https://i.imgur.com/AMv8IqG.mp4",
       "https://i.imgur.com/xhFp4Rc.mp4",
       "https://i.imgur.com/EXar1VY.mp4",
       "https://i.imgur.com/vWigmIF.mp4",
-      "https://i.imgur.com/V6Au0p4.mp4"
+      "https://i.imgur.com/V6Au0p4.mp4",
       "https://i.imgur.com/2LI1yqK.mp4"
-		];
+    ];
 
     const cacheDir = path.join(__dirname, "cache");
     if (!fs.existsSync(cacheDir)) fs.mkdirSync(cacheDir, { recursive: true });
@@ -90,7 +86,6 @@ module.exports = {
       await downloadFile(videoURLs[index], videoPath);
     }
 
-   
     if (args[0]) {
       const query = args[0].toLowerCase();
       const cmd = allCommands.get(query) || [...allCommands.values()].find(c => (c.config?.aliases || []).map(a => a.toLowerCase()).includes(query));
@@ -101,7 +96,7 @@ module.exports = {
       const desc = longDescription?.en || longDescription || shortDescription?.en || shortDescription || "No description";
       const usage = (guide?.en || guide || `{pn}${name}`).replace(/{pn}/g, prefix).replace(/{name}/g, name);
 
-      const detailMsg = 
+      const detailMsg =
         `╭┈─────┈─ ─┈────┈╮\n` +
         `  🌸 𝗖𝗢𝗠𝗠𝗔𝗡𝗗 𝗜𝗡𝗙𝗢 🌸\n` +
         `╰┈─────┈─ ─┈────┈╯\n\n` +
@@ -122,10 +117,10 @@ module.exports = {
 
     // --- Full help list ---
     let msg = `╭┈─────┈──┈─────┈╮\n` +
-              `   🌸  𝐆𝐎𝐀𝐓 𝐌𝐄𝐍𝐔  🌸
-			ADMIN : Xʌ Ɩʆ🗽\n` +
+              `   🌸  𝐆𝐎𝐀𝐓 𝐌𝐄𝐍𝐔  🌸\n` +
+              `ADMIN : Xʌ Ɩʆ🗽\n` +
               `╰┈─────┈──┈─────┈╯\n\n`;
-              
+
     const sortedCategories = Object.keys(categoriesList).sort();
 
     for (const cat of sortedCategories) {
@@ -168,4 +163,4 @@ function downloadFile(url, dest) {
       reject(err);
     });
   });
-	}
+		}
