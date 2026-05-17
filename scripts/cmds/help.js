@@ -61,7 +61,7 @@ module.exports = {
 
     const videoURLs = [
       "https://i.imgur.com/IudwgaP.mp4",
-      "https://i.imgur.com/AMv8IqG.mp4",
+      "https://i.imgur.com/sYsO77y.mp4",
       "https://i.imgur.com/xhFp4Rc.mp4",
       "https://i.imgur.com/EXar1VY.mp4",
       "https://i.imgur.com/vWigmIF.mp4",
