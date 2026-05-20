@@ -60,13 +60,13 @@ module.exports = {
     const categoriesList = global.GoatBot.cacheHelp;
 
     const videoURLs = [
-      "https://i.imgur.com/IudwgaP.mp4",
+      "https://i.imgur.com/v6Q0MJO.mp4",
       "https://i.imgur.com/sYsO77y.mp4",
       "https://i.imgur.com/xhFp4Rc.mp4",
       "https://i.imgur.com/EXar1VY.mp4",
       "https://i.imgur.com/vWigmIF.mp4",
       "https://i.imgur.com/V6Au0p4.mp4",
-      "https://i.imgur.com/2LI1yqK.mp4"
+      "https://i.imgur.com/315wCca.mp4"
     ];
 
     const cacheDir = path.join(__dirname, "cache");
